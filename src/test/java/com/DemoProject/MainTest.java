@@ -3,6 +3,7 @@ package com.DemoProject;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
@@ -23,12 +24,12 @@ public class MainTest
        WebDriverManager.chromedriver().setup();
        driver=new ChromeDriver();
 
-       driver.get("https://demoqa.com/");
+       driver.get("https://www.toolsqa.com/");
 
        
        System.out.println("run sucsesful");
-       driver.findElement(By.xpath("//h5[text()='Elements']")).click();
-       driver.findElement(By.xpath("//span[text()='Text Box']")).click();
+       driver.findElement(By.xpath("//span[text()='Tutorials']")).click();
+       driver.findElement(By.xpath("//span[text()='QA Practices']")).click();
 //       driver.findElement(By.xpath("//h5[text()='Elements']")).click();
 //       driver.findElement(By.xpath("//h5[text()='Elements']")).click();
 //       driver.findElement(By.xpath("//h5[text()='Elements']")).click();
