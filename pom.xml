@@ -8,47 +8,27 @@
   <artifactId>DemoProject</artifactId>
   <version>0.0.1-SNAPSHOT</version>
 
-  <parent>
-    <groupId>at.stderr</groupId>
-    <artifactId>maven-parent</artifactId>
-    <version>2.3.0</version>
-  </parent>
-
+   <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+   
+  </properties>
   <build>
-    <plugins>
-      <plugin>
-        <!-- Build an executable JAR -->
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-jar-plugin</artifactId>
-        <configuration>
-          <archive>
-            <manifest>
-              <addClasspath>true</addClasspath>
-              <classpathPrefix>lib/</classpathPrefix>
-              <mainClass>${project.groupId}.Main</mainClass>
-            </manifest>
-          </archive>
-        </configuration>
-      </plugin>
-
-      <plugin>
-        <groupId>org.codehaus.mojo</groupId>
-        <artifactId>exec-maven-plugin</artifactId>
-        <version>3.1.0</version>
-        <executions>
-          <execution>
-            <goals>
-              <goal>java</goal>
-            </goals>
-          </execution>
-        </executions>
-        <configuration>
-          <mainClass>com.DemoProject.Main</mainClass>
-        </configuration>
-      </plugin>
-    </plugins>
-  </build>
- <dependencies>
+    <pluginManagement>
+     <plugins>
+    <plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.5.1</version>
+				<configuration>
+					<source>1.8</source>
+					<target>1.8</target>
+				</configuration>
+		</plugin>
+		</plugins>
+		 </pluginManagement>
+    </build>
+   
+    <dependencies>
     
 	        <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
 		<dependency>
@@ -69,5 +49,6 @@
 		    <version>7.6.1</version>
 		    <scope>test</scope>
 		</dependency>
+		
 		 </dependencies>
 </project>
