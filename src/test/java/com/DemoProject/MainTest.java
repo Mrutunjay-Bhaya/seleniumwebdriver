@@ -21,7 +21,7 @@ public class MainTest
     {
        WebDriverManager.chromedriver().setup();
        driver=new ChromeDriver();
-       driver.get("https://makemytrip.com");
+       driver.get("https://.com");
        System.out.println("run sucsesful");
     }
 }
