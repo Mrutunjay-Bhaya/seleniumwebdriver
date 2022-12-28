@@ -30,7 +30,7 @@ public class MainTest
        System.out.println("run sucsesful");
        driver.findElement(By.xpath("//span[text()='Tutorials']")).click();
        driver.findElement(By.xpath("//span[text()='QA Practices']")).click();
-//       driver.findElement(By.xpath("//h5[text()='Elements']")).click();
+       driver.findElement(By.xpath("(//a[text()='Software Testing'])[3]")).click();
 //       driver.findElement(By.xpath("//h5[text()='Elements']")).click();
 //       driver.findElement(By.xpath("//h5[text()='Elements']")).click();
 //       
