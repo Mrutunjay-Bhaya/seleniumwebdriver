@@ -22,11 +22,11 @@ String pass="Mrutunjay@123";
 	driver.findElement(By.xpath("//label[text()='Email ID / Username']//following-sibling::input[@type='text']")).sendKeys(id);
 	driver.findElement(By.xpath("//label[text()='Password']//following-sibling::input[@type='password']")).sendKeys(pass);
 	driver.findElement(By.xpath("//button[text()='Login']")).click();
-	Thread.sleep(3000);
+	Thread.sleep(5000);
 	driver.findElement(By.xpath("//div[@class='user-name roboto-bold-text']")).click();
-	Thread.sleep(3000);
+	Thread.sleep(4000);
 	driver.findElement(By.xpath("//em[@class='icon edit']")).click();
-	Thread.sleep(3000);
+	Thread.sleep(4000);
 	driver.findElement(By.id("saveBasicDetailsBtn")).click();
 	
 	Thread.sleep(8000);

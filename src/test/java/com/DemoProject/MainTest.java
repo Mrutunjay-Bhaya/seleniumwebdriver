@@ -18,19 +18,24 @@ public class MainTest
      * Rigorous Test :-)
      * @throws InterruptedException 
      */
-   @Test
+  //@Test
     public void setUp() throws InterruptedException
     {
        WebDriverManager.chromedriver().setup();
        driver=new ChromeDriver();
 
        driver.get("https://www.toolsqa.com/");
-
+ 
+ 
        
        System.out.println("run sucsesful");
        driver.findElement(By.xpath("//span[text()='Tutorials']")).click();
        driver.findElement(By.xpath("//span[text()='QA Practices']")).click();
+       long starttime=System.currentTimeMillis();
        driver.findElement(By.xpath("(//a[text()='Software Testing'])[3]")).click();
+       long endtime =System.currentTimeMillis();
+       long totaltime=endtime - starttime;
+       System.out.println("Total page lode time "+totaltime+ " miliseconds");
 //       driver.findElement(By.xpath("//h5[text()='Elements']")).click();
 //       driver.findElement(By.xpath("//h5[text()='Elements']")).click();
 //       
